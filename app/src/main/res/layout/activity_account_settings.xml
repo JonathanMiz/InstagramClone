@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewPager">
+
+
+        </android.support.v4.view.ViewPager>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <!-- Snippet Top Account Settings -->
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/white_grey_border_bottom">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/profileToolBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/backArrow"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp"
+                            android:src="@drawable/ic_arrow_back" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/backArrow"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Options"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.Toolbar>
+
+
+            </android.support.design.widget.AppBarLayout>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@id/relLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:background="@color/white"
+            android:layout_below="@id/relLayout2">
+
+
+            <TextView
+                android:id="@+id/accountSettingText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/account_settings"
+                android:textColor="@color/black"
+                android:textSize="35dp"
+                android:background="@drawable/grey_border_bottom"/>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/accountSettingText"
+                android:id="@+id/listViewAccountSettings">
+
+            </ListView>
+
+        </RelativeLayout>
+
+        <include layout="@layout/layout_bottom_navigation_view" />
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -4,33 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Home.HomeActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- top toolbar -->
+        <!-- Top Toolbar -->
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/relLayout1">
 
             <include layout="@layout/layout_top_tabs" />
 
         </RelativeLayout>
 
-        <!-- Middle section -->
+        <!-- Middle Section -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/relLayout2">
+            android:id="@+id/relLayout2"
+            android:layout_below="@id/relLayout1">
 
             <include layout="@layout/layout_center_viewpager" />
 
         </RelativeLayout>
 
-        <!-- bottom navigation -->
+        <!-- Bottom Navigation -->
         <include layout="@layout/layout_bottom_navigation_view" />
 
     </RelativeLayout>
